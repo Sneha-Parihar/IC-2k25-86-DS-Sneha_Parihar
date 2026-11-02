@@ -1,0 +1,158 @@
+#include <iostream>
+#define MAX 10
+using namespace std;
+class Array{
+    int a[MAX];
+    int n;
+    public:
+    void create();
+    void display();
+    void insert();
+    void delete_ele();
+    void search();
+    void update();
+    void sort();
+    void reverse();
+    Array() {
+    n = 0;
+}
+};
+void Array::create(){
+     cout<<"Enter number of elements: ";
+     cin>>n;
+     if(n < 0 || n > MAX) {
+    cout << "Invalid array size!";
+    n = 0;
+    return;
+}
+     cout<<"Enter array elements: ";
+     for(int i=0;i<n;i++){
+          cin>>a[i];
+     }
+}
+void Array::display(){
+     cout<<"Entered array elements: ";
+     for(int i=0;i<n;i++){
+          cout<<a[i]<<' ';
+     }
+     cout<<endl;
+}
+void Array::delete_ele() {
+    int pos;
+
+    cout << "Enter position to delete: ";
+    cin >> pos;
+
+    if(pos < 1 || pos > n) {
+        cout << "Please enter a valid position";
+        return;
+    }
+
+    for(int i = pos-1; i < n-1; i++) {
+        a[i] = a[i+1];
+    }
+
+    n--;
+}
+void Array::insert(){
+    int pos;
+    int value;
+    cout<<"Enter position : ";
+    cin>>pos;
+    cout<<"Enter value: ";
+    cin>>value;
+    if(pos<0 || pos>n){
+         cout<<"Please ,enter valid position";
+    }
+    else if(n >= MAX) {
+    cout << "Array is full!";
+    return;
+}
+    else{
+        for(int i=n-1;i>=pos;i--){
+            a[i+1]=a[i];
+        }
+        a[pos]=value;
+        n++;
+    }
+}
+void Array::search(){
+    int element;
+    int f=0;
+    cout<<"Enter element to search: ";
+    cin>>element;
+    for(int i=0;i<n;i++){
+        if(a[i]==element){
+             cout<<"Element found at position "<<i+1<<endl;
+             f=1;
+             break;
+        }
+    }
+    if(f==0){
+        cout<<"Element not found"<<endl;
+    }
+}
+void Array::update(){
+     int pos;
+     int value;
+    cout<<"Enter position : ";
+    cin>>pos;
+    cout<<"Enter value: ";
+    cin>>value;
+    if(pos<0 || pos>=n){
+         cout<<"Please ,enter valid position";
+    }
+    else{
+        for(int i=0;i<n;i++){
+            if(i==pos){
+                a[pos-1]=value;
+                break;
+            }
+        }
+        
+    }
+}
+void Array::sort(){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-1-i;j++){
+        if(a[j+1]<a[j]){
+            int t=a[j];
+            a[j]=a[j+1];
+            a[j+1]=t;
+        }
+    }
+}
+}
+void Array::reverse(){
+      int start=0;
+      int end=n-1;
+      while(start<=end){
+         int t=a[start];
+         a[start]=a[end];
+        a[end]=t;
+        start++;
+        end--;
+      }
+}
+int main(){
+    Array a;
+    int choice;
+    char c;
+    do{
+        cout<<"1.create 2.display 3.insert 4.delete_ele 5.search 6.update 7.sort 8.reverse";
+        cin>>choice;
+        switch(choice){
+            case 1:a.create();break;
+            case 2:a.display();break;
+            case 3:a.insert();break;
+            case 4:a.delete_ele();break;
+            case 5:a.search();break;
+            case 6:a.update();break;
+            case 7:a.sort();break;
+            case 8:a.reverse();break;
+        }
+        cout<<"Do you want to continue:";
+        cin>>c;
+    }while(c=='y'||c=='Y');
+    return 0;
+}
