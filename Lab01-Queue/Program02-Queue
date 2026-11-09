@@ -1,0 +1,76 @@
+
+#include <iostream>
+#define MAX 5
+using namespace std;
+
+int q[MAX];
+int front = -1, rear = -1;
+
+void insert() {
+    int x;
+
+    if (rear == MAX - 1) {
+        cout << "Queue Overflow";
+    }
+    else {
+        cout << "Enter element: ";
+        cin >> x;
+
+        if (front == -1)
+            front = 0;
+
+        rear++;
+        q[rear] = x;
+    }
+}
+
+void delete_element() {
+    if (front == -1 || front > rear) {
+        cout << "Queue Underflow";
+    }
+    else {
+        cout << "Deleted element: " << q[front];
+        front++;
+
+        if (front > rear) {
+            front = rear = -1;
+        }
+    }
+}
+
+void display() {
+    if (front == -1) {
+        cout << "Queue is empty";
+    }
+    else {
+        cout << "Queue elements: ";
+        for (int i = front; i <= rear; i++) {
+            cout << q[i] << " ";
+        }
+    }
+}
+
+int main() {
+    int ch;
+
+    do {
+        cout << "\n\n1. Insert";
+        cout << "\n2. Delete";
+        cout << "\n3. Display";
+        cout << "\n4. Exit";
+
+        cout << "\nEnter choice: ";
+        cin >> ch;
+
+        switch (ch) {
+            case 1: insert(); break;
+            case 2: delete_element(); break;
+            case 3: display(); break;
+            case 4: cout << "Exit"; break;
+            default: cout << "Invalid choice";
+        }
+
+    } while (ch != 4);
+
+    return 0;
+}
