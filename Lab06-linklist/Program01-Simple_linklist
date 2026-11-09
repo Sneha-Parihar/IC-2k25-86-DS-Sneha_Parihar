@@ -1,0 +1,75 @@
+#include <iostream>
+#define max 5
+using namespace std;
+struct node{
+    int d;
+    node *link;
+};
+class ll{
+    node *start;
+    public:
+    void create();
+    void display();
+    void insert(int pos,int val);
+    void count();
+    void search();
+    void delete_e();
+    ll(){
+        start=NULL;
+    }
+};
+void ll::create(){
+    node *on;
+    char c;
+do{
+    node *nn=new node;
+    cout<<"enter data"<<endl;
+    cin>>nn->d;
+    nn->link=NULL;
+    if(start==NULL)
+          start=nn;
+    else
+        on->link=nn;
+    on=nn;
+   cout<<"Do you want to continue"<<endl;
+   cin>>c;
+}while(c=='y'||c=='Y');
+}
+void ll::insert(int pos,int val){
+    node *nn=new node();
+    node *temp;
+    int i;
+    nn->d=val;
+    nn->link=NULL;
+    if(pos==1||start==NULL){
+        nn->link=start;
+        start=nn;
+
+    }
+    else{
+        i=1;
+        temp=start;
+        while(i<(pos-1) && temp->link!=NULL){
+            temp=temp->link;
+            i++;
+        }
+        nn->link=temp->link;
+        temp->link=nn;
+    }
+}
+int main(){
+    ll L;
+    char c;
+    int choice;
+do{
+   cout<<"\n 1.create 2.insert"<<endl;
+   cin>>choice;
+   switch(choice){
+     case 1:L.create();break;
+     case 2:L.insert(2,8);break;
+   }
+   cout<<"Do you want to continue"<<endl;
+   cin>>c;
+}while(c=='y'||c=='Y');
+return 0;
+}
