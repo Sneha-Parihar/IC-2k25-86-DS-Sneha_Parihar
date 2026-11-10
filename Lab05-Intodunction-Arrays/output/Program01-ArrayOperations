@@ -1,0 +1,38 @@
+
+1.create 2.display 3.insert 4.delete_ele 5.search 6.update 7.sort 8.reverse
+1
+Enter number of elements: 5
+Enter array elements: 10 20 30 40 50
+Do you want to continue:y
+
+1.create 2.display 3.insert 4.delete_ele 5.search 6.update 7.sort 8.reverse
+2
+Entered array elements: 10 20 30 40 50
+Do you want to continue:y
+
+1.create 2.display 3.insert 4.delete_ele 5.search 6.update 7.sort 8.reverse
+3
+Enter position : 2
+Enter value: 15
+Do you want to continue:y
+
+1.create 2.display 3.insert 4.delete_ele 5.search 6.update 7.sort 8.reverse
+2
+Entered array elements: 10 20 15 30 40 50
+Do you want to continue:y
+
+1.create 2.display 3.insert 4.delete_ele 5.search 6.update 7.sort 8.reverse
+4
+Enter position to delete: 3
+Do you want to continue:y
+
+1.create 2.display 3.insert 4.delete_ele 5.search 6.update 7.sort 8.reverse
+2
+Entered array elements: 10 20 30 40 50
+Do you want to continue:y
+
+1.create 2.display 3.insert 4.delete_ele 5.search 6.update 7.sort 8.reverse
+5
+Enter element to search: 30
+Element found at position 3
+Do you want to continue:n
