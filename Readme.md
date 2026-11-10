@@ -6,14 +6,13 @@ This repository contains the practical implementations of various Data Structure
 The repository is organized unit-wise, with individual programs, output screenshots, documentation, and learning outcomes.
 
 👨‍🎓 Student Details
-Name: Your Name
-Roll Number: Your Roll Number
+Name:Sneha Parihar
+Roll Number: IC-2K25-86
 Course Code: IC-307D
 Subject: Data Structures and Algorithms Lab
-Academic Year: 2026–27
 📂 Repository Structure
 text
-Roll_No-DS-Your_Name/
+Roll_No-DS-Sneha_Parihar/
 │
 ├── Lab01-Queue/
 │   ├── Output/
