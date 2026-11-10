@@ -1,0 +1,12 @@
+Example01----
+Enter size of array: 5
+Enter array elements: 10 20 30 40 50
+Enter element to search: 30
+Element found at position: 3
+
+Example02-----
+
+Enter size of array: 5
+Enter array elements: 10 20 30 40 50
+Enter element to search: 60
+Element not found
