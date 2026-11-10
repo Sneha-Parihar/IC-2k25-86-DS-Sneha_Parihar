@@ -1,0 +1,46 @@
+
+  1.insert  2.delete_e 3.display
+1
+enter data,priority,order
+100 2 3
+Do you want to continue y
+
+  1.insert  2.delete_e 3.display
+1
+enter data,priority,order
+200 1 2
+Do you want to continue y
+
+  1.insert  2.delete_e 3.display
+1
+enter data,priority,order
+300 1 1
+Do you want to continue y
+
+  1.insert  2.delete_e 3.display
+3
+priority1
+order1
+data300
+priority1
+order2
+data200
+priority2
+order3
+data100
+Do you want to continue y
+
+  1.insert  2.delete_e 3.display
+2
+deleted item: 300 1 1
+Do you want to continue y
+
+  1.insert  2.delete_e 3.display
+3
+priority1
+order2
+data200
+priority2
+order3
+data100
+Do you want to continue n
