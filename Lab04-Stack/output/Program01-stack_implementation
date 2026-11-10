@@ -1,0 +1,33 @@
+
+1.push 2.pop 3.display
+1
+enter element
+10
+Do you want to continue? y
+
+1.push 2.pop 3.display
+1
+enter element
+20
+Do you want to continue? y
+
+1.push 2.pop 3.display
+1
+enter element
+30
+Do you want to continue? y
+
+1.push 2.pop 3.display
+3
+30 20 10
+Do you want to continue? y
+
+1.push 2.pop 3.display
+2
+item popped is 30
+Do you want to continue? y
+
+1.push 2.pop 3.display
+3
+20 10
+Do you want to continue? n
