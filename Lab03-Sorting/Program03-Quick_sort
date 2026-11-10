@@ -7,7 +7,7 @@ int partition(int ll,int ul,int a[]){
     start=ll;
     end=ul;
     while(start<end){
-        while( a[start]<=pivot){
+        while( start <= ul && a[start]<=pivot){
             start++;
         }
         while(a[end]>pivot){
