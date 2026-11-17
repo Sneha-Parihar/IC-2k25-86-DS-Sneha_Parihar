@@ -19,9 +19,11 @@ void insert() {
         if (front == -1)
             front = 0;
 
-        rear++;
+         else
+             rear++;
         q[rear] = x;
-    }
+}
+    
 }
 
 void delete_element() {
