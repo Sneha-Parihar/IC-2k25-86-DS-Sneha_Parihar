@@ -33,10 +33,6 @@ void delete_element() {
     else {
         cout << "Deleted element: " << q[front];
         front++;
-
-        if (front > rear) {
-            front = rear = -1;
-        }
     }
 }
 
